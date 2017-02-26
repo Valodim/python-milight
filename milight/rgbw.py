@@ -17,6 +17,12 @@ COMMANDS = {
     'FASTER': Command(0x44),
 }
 
+COMMANDS['NIGHT'] = ((COMMANDS['OFF'][0], Command(0xC1)), #All
+        (COMMANDS['OFF'][1], Command(0xC6)), #Group 1
+        (COMMANDS['OFF'][2], Command(0xC8)), #Group 2
+        (COMMANDS['OFF'][3], Command(0xCA)), #Group 3
+        (COMMANDS['OFF'][4], Command(0xCC))) #Group 4
+
 COMMANDS['WHITE'] = ((COMMANDS['ON'][0], Command(0xC2)), #All
           (COMMANDS['ON'][1], Command(0xC5)), #Group 1
           (COMMANDS['ON'][2], Command(0xC7)), #Group 2
